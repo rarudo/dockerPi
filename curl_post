@@ -1,0 +1,12 @@
+#! /bin/sh
+
+ip=`hostname -i`
+
+while :
+do
+	random=`od -vAn --width=4 -tu4 -N4 </dev/urandom`
+	random=$(($random % 180))
+	json="{\"country\":\"England\",\"ip\":\"${ip}\"}"
+	curl  -H "Content-type: aation/json" -X POST -d "${json}" $1/
+	sleep 1
+done
