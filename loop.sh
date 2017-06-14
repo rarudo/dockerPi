@@ -1,6 +1,6 @@
 #!/bin/bash
 
-array=("America" "Japan" "Australia" "China" "Russia" "England")
+array=("America" "Japan" "Australia" "China" "Russia" "Africa" "Europe" "Brazil")
 
 for((j=0;j<8;j++));do
 	for((i = 0; $i < 20; i++));do
